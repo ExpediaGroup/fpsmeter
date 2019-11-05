@@ -1,6 +1,6 @@
 {
     "name": "@vrbo/fpsmeter",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Small utility that measures frames per second in a browser context.",
     "license": "Apache-2.0",
     "author": {

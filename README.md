@@ -1,7 +1,7 @@
 # @vrbo/fpsmeter
 
 [![NPM Version](https://img.shields.io/npm/v/@vrbo/fpsmeter.svg?style=flat-square)](https://www.npmjs.com/package/@vrbo/fpsmeter)
-[![Build Status](https://travis-ci.org/homeaway/fpsmeter.svg?branch=master)](https://travis-ci.org/homeaway/fpsmeter)
+[![Build Status](https://travis-ci.org/expediagroup/fpsmeter.svg?branch=master)](https://travis-ci.org/expediagroup/fpsmeter)
 
 Optimized javascript utility for measuring frames per second in a browser environment. Useful for observing end-user client run-time performance without adversly impacting performance.
 
