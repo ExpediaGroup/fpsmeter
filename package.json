@@ -8,7 +8,10 @@
         "email": "oss@expediagroup.com"
     },
     "contributors": [
-        "neenhouse"
+        "neenhouse",
+        "kashorn",
+        "brianjquinn",
+        "cmoroexpedia"
     ],
     "main": "lib/transpiled/index.js",
     "module": "lib/esm/index.js",
@@ -32,13 +35,13 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/homeaway/fpsmeter.git"
+        "url": "https://github.com/expediagroup/fpsmeter.git"
     },
     "publishConfig": {
         "registry": "https://registry.npmjs.org"
     },
     "bugs": {
-        "url": "https://github.com/homeaway/fpsmeter/issues"
+        "url": "https://github.com/expediagroup/fpsmeter/issues"
     },
     "husky": {
         "hooks": {

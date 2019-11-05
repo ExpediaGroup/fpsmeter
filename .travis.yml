@@ -6,3 +6,11 @@ install:
 script:
     - 'npm run build'
     - 'npm run test'
+deploy:
+  provider: npm
+  email: "$NPM_EMAIL"
+  api_key: "$NPM_API_TOKEN"
+  skip_cleanup: true
+  on:
+    tags: true
+    branch: master
