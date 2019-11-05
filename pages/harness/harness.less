@@ -1,0 +1,84 @@
+// Copyright 2019 Expedia Group, Inc.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+/* stylelint-disable */
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.render-controls {
+    margin: 20px 10px;
+    span {
+        display: inline-block;
+        vertical-align: top;
+    }
+    input {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+.harness-base {
+    width: 100%;
+    max-width: 820px;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+}
+
+.fpsmeter {
+    margin: 0 !important;
+    right: 0px !important;
+    left: auto !important;
+}
+.box {
+    position: absolute;
+    display: inline-block;
+    border: 1px solid black;
+    padding: 4px 8px;
+}
+.alt {
+    border: 1px dotted black;
+}
+
+.fpsmeter {
+    position: fixed;
+    display: inline-block;
+    padding: 20px !important;
+    background: white;
+    border: 3px solid #000;
+    top: 0px;
+    left: 0px;
+    margin: 50px;
+    z-index: 99999;
+    font-size: 16px !important;
+}
+
+.fpsmeter.normal {
+    color: green;
+}
+.fpsmeter.dead {
+    color: black;
+}
+.fpsmeter.danger {
+    color: red;
+}
+.fpsmeter.warn {
+    color: orange;
+}
+.fpsmeter.invalid {
+    color: red;
+}

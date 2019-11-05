@@ -1,0 +1,139 @@
+{
+    "name": "@vrbo/fpsmeter",
+    "version": "0.0.0",
+    "description": "Small utility that measures frames per second in a browser context.",
+    "license": "Apache-2.0",
+    "author": {
+        "name": "Expedia Group",
+        "email": "oss@expediagroup.com"
+    },
+    "contributors": [
+        "neenhouse"
+    ],
+    "main": "lib/transpiled/index.js",
+    "module": "lib/esm/index.js",
+    "sideEffects": [
+        "*.css",
+        "*.less"
+    ],
+    "scripts": {
+        "start": "webpack-dev-server --open",
+        "build": "npm run build:modern && npm run build:esm && npm run build:umd",
+        "build:docs": "webpack",
+        "build:esm": "BABEL_ENV=esm babel src --out-dir lib/esm --source-maps",
+        "build:modern": "BABEL_ENV=modern babel src --out-dir lib/transpiled --source-maps",
+        "build:umd": "BABEL_ENV=umd webpack --bail",
+        "build:analyze": "NODE_ENV=production BABEL_ENV=umd webpack",
+        "coverage": "nyc report --reporter=text-lcov | coveralls",
+        "test": "npm run test:lint && npm run test:coverage",
+        "test:coverage": "nyc --reporter=html --reporter=text npm run test:unit",
+        "test:lint": "eslint --color src",
+        "test:unit": "mocha --require ./setup.js --colors tests/unit/*.test.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/homeaway/fpsmeter.git"
+    },
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org"
+    },
+    "bugs": {
+        "url": "https://github.com/homeaway/fpsmeter/issues"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick --staged"
+        }
+    },
+    "nyc": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100,
+        "exclude": [
+            "setup.js",
+            "tests/**/*.js"
+        ],
+        "colors": true,
+        "reporter": [
+            "text",
+            "text-summary",
+            "html"
+        ],
+        "instrument": false,
+        "sourceMap": false
+    },
+    "engines": {
+        "node": ">=8.0.0",
+        "npm": ">=5.0.0"
+    },
+    "keywords": [
+        "fps",
+        "meter"
+    ],
+    "dependencies": {},
+    "peerDependencies": {},
+    "devDependencies": {
+        "@babel/cli": "^7.0.0",
+        "@babel/core": "^7.0.0",
+        "@babel/plugin-proposal-class-properties": "^7.5.5",
+        "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+        "@babel/plugin-transform-destructuring": "^7.5.0",
+        "@babel/preset-env": "^7.5.5",
+        "@babel/preset-react": "^7.0.0",
+        "@babel/register": "^7.0.0",
+        "autoprefixer": "^7.1.0",
+        "babel-eslint": "^10.0.1",
+        "babel-loader": "^8.0.0",
+        "babel-plugin-istanbul": "^5.2.0",
+        "chai": "^4.1.2",
+        "classnames": "^2.0.0",
+        "coveralls": "^3.0.6",
+        "css-loader": "^1.0.0",
+        "cssnano": "^4.1.4",
+        "enzyme": "^3.4.3",
+        "enzyme-adapter-react-16": "^1.0.0",
+        "eslint": "^6.1.0",
+        "eslint-config-standard": "^13.0.1",
+        "eslint-loader": "^2.1.0",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-node": "^9.1.0",
+        "eslint-plugin-prettier": "^3.1.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-react": "^7.14.3",
+        "eslint-plugin-standard": "^4.0.0",
+        "file-loader": "^2.0.0",
+        "html-webpack-plugin": "^3.2.0",
+        "ignore-styles": "^5.0.1",
+        "jsdom": "^15.1.1",
+        "jsdom-global": "^3.0.2",
+        "less": "^3.8.1",
+        "less-loader": "^4.1.0",
+        "less-plugin-npm-import": "^2.1.0",
+        "mini-css-extract-plugin": "^0.5.0",
+        "mocha": "^6.2.0",
+        "nyc": "^14.1.1",
+        "open": "0.0.5",
+        "postcss-loader": "^3.0.0",
+        "prettier": "^1.18.2",
+        "pretty-quick": "^1.11.1",
+        "prop-types": "^15.7.2",
+        "react": "^16.0.0",
+        "react-dom": "^16.0.0",
+        "react-responsive-carousel": "^3.1.49",
+        "react-test-renderer": "^16.0.0",
+        "sinon": "^7.0.0",
+        "sinon-chai": "^3.2.0",
+        "style-loader": "^0.23.1",
+        "system-bell-webpack-plugin": "^1.0.0",
+        "terser-webpack-plugin": "^1.1.0",
+        "url-loader": "^1.0.1",
+        "webpack": "^4.21.0",
+        "webpack-bundle-analyzer": "^3.1.0",
+        "webpack-cli": "^3.1.0",
+        "webpack-dev-server": "^3.1.7",
+        "webpack-merge": "^4.1.4",
+        "webpack-module-analyzer-plugin": "^0.3.0",
+        "webpack-visualizer-plugin": "^0.1.11"
+    }
+}
