@@ -90,7 +90,10 @@ export default class FPSMeter {
             avgfps: this.avgfps
         });
         // stop meter if `this.maxCalculations` is exceeded
-        if (this.maxCalculations && this.fpsWindows.length >= this.maxCalculations) {
+        if (
+            this.maxCalculations &&
+            this.fpsWindows.length >= this.maxCalculations
+        ) {
             this.stop('completed');
         }
     }
