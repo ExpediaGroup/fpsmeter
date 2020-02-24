@@ -31,7 +31,8 @@
         "test": "npm run test:lint && npm run test:coverage",
         "test:coverage": "nyc --reporter=html --reporter=text npm run test:unit",
         "test:lint": "eslint --color src",
-        "test:unit": "mocha --require ./setup.js --colors tests/unit/*.test.js"
+        "test:unit": "mocha --require ./setup.js --colors tests/unit/*.test.js",
+        "semantic-release": "semantic-release"
     },
     "repository": {
         "type": "git",
