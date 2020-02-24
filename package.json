@@ -67,10 +67,11 @@
         "sourceMap": false
     },
     "engines": {
-        "node": ">=8.0.0",
-        "npm": ">=5.0.0"
+        "node": ">=10.0.0",
+        "npm": ">=6.0.0"
     },
     "keywords": [
+        "fpsmeter",
         "fps",
         "meter"
     ],
@@ -125,6 +126,7 @@
         "react-dom": "^16.0.0",
         "react-responsive-carousel": "^3.1.49",
         "react-test-renderer": "^16.0.0",
+        "semantic-release": "^17.0.4",
         "sinon": "^7.0.0",
         "sinon-chai": "^3.2.0",
         "style-loader": "^0.23.1",
