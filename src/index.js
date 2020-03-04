@@ -78,7 +78,6 @@ export default class FPSMeter {
         this.rafTimeout = setTimeout(() => {
             this.stop('timeout');
         }, this.timeout);
-
         window.requestAnimationFrame(this.tick);
         return true;
     };
