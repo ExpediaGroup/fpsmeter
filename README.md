@@ -24,7 +24,7 @@ const meter = new FPSMeter({
         // update.fps - FPS of last window (per defined calculatePerMs option)
         // update.avgfps - FPS average since start()
     },
-    onStop: (reason) {
+    onStop: (reason) => {
         // reasons why FPSMeter can halt:
         // FPSMeter.stop() initiated by: user
         // FPSMeter.stop() initiated by: document visibilitychange event
