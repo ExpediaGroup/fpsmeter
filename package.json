@@ -92,7 +92,7 @@
         "babel-loader": "^8.0.0",
         "babel-plugin-istanbul": "^5.2.0",
         "babel-plugin-transform-rename-import": "^2.3.0",
-        "chai": "^4.1.2",
+        "chai": "^5.0.0",
         "classnames": "^2.0.0",
         "coveralls": "^3.0.6",
         "css-loader": "^1.0.0",
